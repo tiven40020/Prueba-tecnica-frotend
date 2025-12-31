@@ -1,0 +1,719 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+    width: 350px;
+    max-width: 350px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.container-campo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.login-container h2 {
+    text-align: center;
+    font-weight: 400 !important;
+    font-size: 18px;
+}
+
+.login-container img {
+    width: 145px;
+    margin-bottom: 17px;
+}
+.container-campo input {
+    background-color: white;
+    padding: 10px 10px 10px 35px; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    color: black;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.container-campo input:focus {
+    border-color: #1840B2; 
+}
+
+.contenedor-page-login{
+    margin: 0;
+    display: flex;
+    place-items: center;
+    width: 100%;
+    height: 100dvh;
+    margin: auto;
+    justify-content: center;
+    background-image: url('../assets/fondo-formas.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#root {
+    min-width: -webkit-fill-available;
+}
+
+.formulario-login {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container-campo img{
+    width: 12px;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+}
+.container-campo label {
+    font-size: 12px;
+}
+.acor-recuperar-contraseña {
+    font-size: 12px;
+    color: #1840B2;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.btn-login {
+    background-color: #1840B2; 
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-login:disabled {
+    background-color: lightgray;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border: 1px solid #ccc;
+}
+
+.btn-login:not(:disabled) {
+    background-color: #1840B2; 
+    color: white;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-login:not(:disabled):hover {
+    background-color: #123085;
+}
+
+.error-text {
+    font-size: 10px;
+}
+.error-main {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    margin: 0;
+}
+
+.login-container {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    gap: 15px;
+    backdrop-filter: blur(2px); 
+}
+
+.loading-overlay p {
+    color: #1840B2;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+}
+
+.spinner-grande {
+    width: 45px;
+    height: 45px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #1840B2; 
+    border-radius: 50%;
+    animation: spin-overlay 1s linear infinite;
+}
+
+@keyframes spin-overlay {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/*   page bakanes*/
+
+
+.page-title {
+    color: black;
+    font-size: 44px;
+}
+.contenedor-slider {
+    width: 230px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 999;
+}
+.categorias-content {
+    width: 100%;
+    height: 100%;
+    margin-top: 45px;
+    padding: 2rem;
+    padding-left: 270px;
+}
+
+
+.contenedor-page-bakanes {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+.main-header{
+    width: 100%;
+    height: 60px;
+    background-color: #1a1a40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.main-header {
+    width: 100%;
+    height: 60px;
+    background-color: #1a1a40; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    height: 35px; /* Ajusta según el tamaño de tu imagen */
+    width: auto;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #f1c40f; /* El amarillo que se ve en tu imagen */
+    color: #1a1a40;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+.contenedor-page-bakanes {
+    background-color: #f5f7fb;
+    width: 100%;
+}
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #f0f0f0; /* Línea divisoria sutil */
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+  /* Hacer el botón transparente */
+  background: none;
+  border: none;
+  padding: 10px 5px;
+  width: 100%;
+  
+  /* Estilo de texto */
+  color: #666;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.logout-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Efecto al pasar el mouse */
+.logout-btn:hover {
+  color: #1a1a40; /* Se oscurece un poco al pasar el mouse */
+}
+
+/* Reset de enfoque para accesibilidad */
+.logout-btn:focus {
+  outline: none;
+}
+
+
+/* SlidebarItems */
+
+sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #555; /* Color de texto normal */
+  gap: 12px;
+  border-left: 4px solid transparent; /* Espacio para la marca de activo */
+}
+
+.sidebar-item:hover {
+  background-color: #f0f4ff;
+}
+
+/* Estilos cuando el item está activo (como "Bakanes" en tu imagen) */
+.sidebar-item.active {
+  background-color: #eef2ff; /* Azul muy clarito */
+  color: #1a1a40; /* Azul oscuro del texto */
+  border-left: 4px solid #00d1d1; /* El color turquesa/celeste que se ve en la imagen */
+  font-weight: 600;
+}
+
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.sidebar-label {
+  font-size: 14px;
+}
+
+.nav-item span {
+    color:black;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-item img {
+    object-fit:cover;
+}
+
+/*slidebar*/
+
+.sidebar-logo {
+    height: 151px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../assets/fondo-formas2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar-logo img {
+    width: 165px;
+}
+.sidebar {
+    height: 100dvh;
+}
+
+.sidebar-nav{
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* TabsNavigation */
+
+.tab-item  {
+    background: none;
+    border: none;
+    padding: 10px 5px;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.tabs-container{
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* actionbar*/
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-create {
+    background-color: #1a1a40;
+    border-radius: 5px;
+}
+
+.search-box input {
+    background-color: white;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: black;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 224px;
+}
+.search-box {
+    display: flex;
+    gap: 3rem;
+    position: relative;
+}
+.search-box img {
+    width: 12px;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+}
+.btn-filtros{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    padding: 10px 5px;
+    width: 100%;
+    color: black;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: color 0.2s ease
+}
+
+.search-box .img-filtro{
+    position: absolute;
+    left: 240px;
+    width: 16px;
+    top: 14px;
+}
+
+/* DataTable*/
+
+.pagination-info {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-footer {
+    color: black;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+.pagination-buttons button {
+    color: black;
+    background-color: transparent;
+}
+/* Estilo base para todos los badges */
+.badge {
+  padding: 6px 50px; /* Ajustado para que no sea excesivamente alto */
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Estilo específico cuando es ACTIVO */
+.badge.active {
+  background-color: #D4F7D4; /* Un verde claro similar a lightgreen */
+  border: 1px solid #0B8A00;
+  color: #0B8A00;
+}
+
+/* Estilo específico cuando es INACTIVO (opcional) */
+.badge.inactive {
+  background-color: #FFE5E5;
+  border: 1px solid #C53030;
+  color: #C53030;
+}
+
+.table-container {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #f8f9fa;
+  padding: 16px;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+}
+
+.custom-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+  vertical-align: middle;
+}
+
+/* Estilo para el Badge de Estado "Activo" */
+.status-badge.active {
+  background-color: #e6f4ea;
+  color: #1e7e34;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  border: 1px solid #c3e6cb;
+  display: inline-block;
+}
+
+/* Icono de categoría (el cuadrado rosado) */
+.category-icon {
+  background-color: #fce4ec;
+  color: #d81b60;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.description-cell {
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+/* Botones de acción transparentes */
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.action-btn:hover {
+  opacity: 1;
+}
+
+/* Paginación */
+.table-pagination {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  font-size: 14px;
+  color: #666;
+}
+
+.pagination-left, .pagination-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.page-select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.page-arrows button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  color: #999;
+}
+
+
+/*CreateCategoryModal*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  width: 400px;
+  border-radius: 6px;
+  padding: 24px;
+  position: relative;
+}
+
+.modal-header h2 {
+  color: #2D2D6A;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex; flex-direction: column;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.upload-icon:focus{
+    outline: none;
+}
+.input-group input, .input-group textarea {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: black;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 14px;
+    width: 100%;
+}
+
+.char-count {
+  font-size: 10px; text-align: right; color: #888;
+}
+
+/* Estilos para el Switch (Toggle) */
+.switch-group {
+  display: flex; align-items: center; gap: 10px; margin-top: 20px;
+}
+
+.switch {
+  position: relative; display: inline-block; width: 40px; height: 20px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+  position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc; transition: .4s; border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute; content: ""; height: 14px; width: 14px;
+  left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #00C1B4; }
+input:checked + .slider:before { transform: translateX(20px); }
+
+/* Botones inferiores */
+.modal-footer {
+  display: flex; gap: 10px; margin-top: 50px;
+}
+
+.btn-cancel {
+  flex: 1; padding: 10px; border: 2px solid #2D2D6A; background: transparent;
+  color: #2D2D6A; border-radius: 6px; cursor: pointer; font-weight: bold;
+}
+
+.btn-crear {
+  flex: 1; padding: 10px; border: none; background: #DDD;
+  color: #AAA; border-radius: 6px; font-weight: bold;
+}
+
+
+.btn-crear.active {
+  background: #2D2D6A; color: white; cursor: pointer;
+}
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    background-color: transparent;
+    color: black;
+    font-size: 17px;
+}
+.upload-icon {
+    position: absolute;
+    right: -3px;
+    background-color: transparent;
+    top: -3px;
+}
+
+.file-input{
+    position: relative;
+}
