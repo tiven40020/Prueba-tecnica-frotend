@@ -1,4 +1,4 @@
-# Prueba Técnica - Frontend React (BeKing Network)
+# Prueba Técnica - Frontend React 
 
 Esta aplicación es una solución a la prueba técnica para el cargo de Desarrollador Frontend. Implementa un sistema de gestión de "Acciones" con autenticación, listado paginado y creación de registros.
 
